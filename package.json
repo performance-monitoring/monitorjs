@@ -1,0 +1,32 @@
+{
+  "name": "monitorjs",
+  "version": "1.0.0",
+  "description": "端内监控api，收集用户端的数据，然后上报给服务接口",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/performance-monitoring/monitorjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/performance-monitoring/monitorjs/issues"
+  },
+  "homepage": "https://github.com/performance-monitoring/monitorjs#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "@types/signale": "^1.4.1",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5",
+    "typescript-eslint-parser": "^22.0.0"
+  },
+  "dependencies": {
+    "jest-canvas-mock": "^2.2.0",
+    "save-dev": "0.0.1-security"
+  }
+}
