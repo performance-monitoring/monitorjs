@@ -1,5 +1,6 @@
 import { Plugin } from '../plugin/plugin'
 import { IMonitorDataModel } from '../types/monitor'
+import { deepCopy } from '../utils'
 
 export class Monitor {
   private dataModel: IMonitorDataModel;
@@ -10,12 +11,9 @@ export class Monitor {
     this.dataModel = {};
   }
 
-  public visit(plugin: Plugin): void  {
-    plugin.visit(this);
-  }
-
-  public addPlugin(plugin: Plugin): void {
+  public visit(plugin: Plugin): void {
     this.plugins.set(plugin.uuid, plugin);
+    plugin.visit(this)
   }
 
   public addData(model: IMonitorDataModel): void {
@@ -26,6 +24,10 @@ export class Monitor {
     for (const [key, plugin] of this.plugins) {
       plugin.run()
     }
+  }
+
+  get data(): IMonitorDataModel {
+    return deepCopy(this.dataModel)
   }
 
   public destroy(): void {

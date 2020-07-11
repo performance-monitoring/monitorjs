@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "jest-canvas-mock": "^2.2.0",
-    "save-dev": "0.0.1-security"
+    "save-dev": "0.0.1-security",
+    "signale": "^1.4.0"
   }
 }

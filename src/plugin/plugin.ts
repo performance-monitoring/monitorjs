@@ -1,5 +1,5 @@
 import { Monitor } from '../system/monitor';
-import { id } from '../utils/id';
+import { id } from '../utils';
 export abstract class Plugin {
   public monitor!: Monitor;
   public uuid: number;
