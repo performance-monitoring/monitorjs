@@ -1,6 +1,6 @@
 import { Plugin } from '../plugin/plugin'
 import { IMonitorDataModel } from '../types/monitor'
-import { deepCopy } from '../utils'
+import { deepCopy } from '../util'
 
 export class Monitor {
   private dataModel: IMonitorDataModel;

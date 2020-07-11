@@ -59,3 +59,14 @@ abstract class Monitor {
   destroy(): void;
 }
 ```
+
+### 使用实例
+```ts
+import { EnvPlugin, AssetPlugin, Monitor } from './index'
+const envPlugin = new EnvPlugin()
+monitor.visit(envPlugin)
+const assetPlugin = new AssetPlugin()
+monitor.visit(assetPlugin)
+monitor.run()
+console.log(monitor.data)
+```
